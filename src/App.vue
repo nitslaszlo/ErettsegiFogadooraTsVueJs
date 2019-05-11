@@ -36,6 +36,9 @@
 
     <!-- Nem a feladat része : -->
     <div id="egyebek" v-if="mutat">
+      <p><b>{{fajlNeve}} fájl:</b><br>
+        <span v-for="(t, index) in foglaltTanarokNevsora.split('\n')" :key="index">{{ t.trim() }}<br></span>
+      </p>
       <p><b>fogado.txt fájl:</b><br>
         <span v-for="(t, index) in txtSorai.split('\n')" :key="index">{{ t.trim() }}<br></span>
       </p>
