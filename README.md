@@ -7,6 +7,7 @@ az utcakep.txt állományt le kell menteni.
 Források az "src" mappában.
 
 ## netlify link a teszteléshez:
+https://blissful-goldwasser-17ca35.netlify.com/
 
 
 ## Fejlesztői környezet kialakítása:
