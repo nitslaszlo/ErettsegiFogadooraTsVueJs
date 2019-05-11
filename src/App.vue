@@ -34,13 +34,13 @@
     </p>
     <!-- Megoldás DIV -->
 
-    <!-- Nem a feladat része : -->
+    <!-- Nem a megoldás része : -->
     <div id="egyebek" v-if="mutat">
-      <p><b>{{fajlNeve}} fájl:</b><br>
-        <span v-for="(t, index) in foglaltTanarokNevsora.split('\n')" :key="index">{{ t.trim() }}<br></span>
+      <p><b>{{fajlNeve}} fájl:</b>
+        <pre>{{foglaltTanarokNevsora}}</pre>
       </p>
-      <p><b>fogado.txt fájl:</b><br>
-        <span v-for="(t, index) in txtSorai.split('\n')" :key="index">{{ t.trim() }}<br></span>
+      <p><b>fogado.txt fájl:</b>
+        <pre>{{txtSorai}}</pre>
       </p>
     </div>
   </div>
@@ -68,6 +68,7 @@ export default class App extends Vue {
   }
 
   private feldolgoz(): void {
+    this.tanarok.clear();
     try { // try-catch nem a feladat része
       this.txtSorai.split("\n").forEach(i => {
         const aktSor: string = i.trim();
@@ -84,9 +85,10 @@ export default class App extends Vue {
         }
       });
       this.mutat = true;
+      this.menthet = true;
     } catch (error) { // try-catch nem a feladat része
       this.mutat = false;
-      this.tanarok.clear();
+      this.menthet = false;
       this.txtSorai = "";
       window.alert("Hibás forrás!");
     }
@@ -175,5 +177,10 @@ a {
 
 input[type="text"] {
   background-color: lightgray;
+}
+
+pre {
+  font-size: 1.1em;
+  margin: 0;
 }
 </style>
