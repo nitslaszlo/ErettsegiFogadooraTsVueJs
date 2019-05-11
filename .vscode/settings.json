@@ -1,0 +1,30 @@
+{
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "spellright.language": [
+        "en",
+        "hu"
+    ],
+    "spellright.documentTypes": [
+        "latex",
+        "html",
+        "javascript",
+        "css",
+        "vue",
+        "typescript"
+    ],
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.ts": "vscode-typescript",
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_line_length": 120,
+            "wrap_attributes": "auto"
+        }
+    },
+}
+// Line wrapping of attributes.
+//- Auto: Only when the trip length is exceeded will the property be newline.
+//- Force: Break each attribute except the first one.
+//- Force-aligned: Break each attribute except the first one and keep it aligned.
+//- Force-expand-multiline: Break each attribute.
+//- aligned-multiple: Vertical alignment of attributes when the length of the break line is exceeded.
