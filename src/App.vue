@@ -23,6 +23,7 @@
         Foglalt időpont: {{ legelsonekFoglaltTanar.legelsoFoglalasIdopont }}<br>
         Foglalás ideje: {{ legelsonekFoglaltTanar.legelsoFoglalasIdeje }}
       </p>
+      <!-- Tanár neve input nem a 6. feladat része, de így érdekesebb -->
       <p>6. feladat <input v-model="inputNev2" type="text">
         <span v-for="(t, index) in szabadNev2" :key="index"><br>{{ t }}</span><br>
         {{ inputNev2 }} legkorábban távozhat: {{ legkorabbanTavozhatNev2 }}
@@ -39,7 +40,7 @@
       <p><b>{{fajlNeve}} fájl:</b>
         <pre>{{foglaltTanarokNevsora}}</pre>
       </p>
-      <p><b>fogado.txt fájl:</b>
+      <p><b>A forrás fogado.txt fájl:</b>
         <pre>{{txtSorai}}</pre>
       </p>
     </div>

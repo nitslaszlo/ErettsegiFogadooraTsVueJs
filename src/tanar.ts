@@ -40,8 +40,9 @@ export default class Tanar {
     public get szabadIdopontok(): string[] {
         const szabadLista: string[] = [];
         for (let i: number = 16 * 60; i < 18 * 60; i += 10) {
+            const ora: string = `${Math.floor(i / 60)}`;
             const perc: string = `${i % 60}`.padStart(2, "0"); // "0" -> "00"
-            const idopont: string = `${Math.floor(i / 60)}:${perc}`; // pl.: "16:00"
+            const idopont: string = `${ora}:${perc}`; // pl.: "16:00"
             if (!this.foglalasok.has(idopont)) { // ha nincs ilyen időpont foglalva
                 szabadLista.push(idopont); // mehet a szabad időpont a listába
             }
