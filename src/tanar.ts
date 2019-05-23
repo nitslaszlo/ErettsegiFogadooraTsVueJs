@@ -4,6 +4,7 @@ export default class Tanar {
     private foglalasok: Map<string, string>;
 
     public constructor(nev: string) {
+        // Csorba Ede 16:30 2017.10.28-18:48
         this.nev = nev;
         this.foglalasok = new Map<string, string>();
     }
